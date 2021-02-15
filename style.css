@@ -1,0 +1,112 @@
+/*
+dark gray - #626567
+med gray - #BDC3C7
+lyt gray - #E5E7E9
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ font-family: "Lato", sans-serif;
+ font-weight: 400;
+ font-size: 16px;   
+ line-height: 1.7;
+ color: #777;
+ padding: 30px;
+}
+
+.header{
+    height: 95vh;
+    background-image:  linear-gradient(to right bottom, #e5e7e9c4, #626567b4), url('https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 80%, 0 100%);
+    position: relative;
+}
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo{
+    color: #000000;
+height: 50%;
+width: 50%
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.heading-primary-main{
+    text-align: center;
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 25px;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 15px;
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.btn:link,.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 35px;
+    transition: all 0.3s;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+.btn-white{
+    background-color: #fff;
+    color: #777;
+    
+
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
