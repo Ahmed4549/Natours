@@ -1,3 +1,19 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -7,33 +23,15 @@ html {
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box; }
+
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(229, 231, 233, 0.8), rgba(98, 101, 103, 0.8)), url("https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 80%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+  padding: 3rem; }
 
 .heading-primary {
   color: #fff;
@@ -55,22 +53,6 @@ body {
     animation-name: moveInRight;
     animation-duration: 1.5s; }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -78,7 +60,7 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 3.5rem;
-  transition: all 0.3s;
+  transition: all .5s;
   font-weight: 300;
   letter-spacing: 0.5rem; }
 
@@ -93,3 +75,48 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(229, 231, 233, 0.8), rgba(98, 101, 103, 0.8)), url("https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 80%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  text-align: center;
+  max-width: 114rem;
+  background-color: #d1d0d0;
+  color: black;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row .col-1-of-2 {
+    width: calc((100% - 5rem) / 2);
+    background-color: red;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 5rem; }
+  .row .col-1-of-3 {
+    width: calc((100% - (2* 5rem)) / 3);
+    background-color: red;
+    float: left; }
+    .row .col-1-of-3:not(:last-child) {
+      margin-right: 5rem; }
