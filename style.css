@@ -53,6 +53,47 @@ body {
     animation-name: moveInRight;
     animation-duration: 1.5s; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #b7b7b8, #626567);
+  display: inline-block;
+  letter-spacing: .2rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.5s ease; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(20deg); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #626567; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(last-child) {
+    margin-bottom: 4rem; }
+
+.u-text-center {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-med {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -19rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -76,6 +117,51 @@ body {
   background-color: #fff;
   color: #777; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #626567;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0.1rem solid #626567;
+  padding: .3rem;
+  transition: all .6s ease; }
+
+.btn-text:hover {
+  background-color: #626567;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(2px); }
+
+.composition {
+  position: relative;
+  outline-offset: 1rem; }
+  .composition___photo {
+    max-width: 55%;
+    box-shadow: 0 1rem 2rem #626567;
+    position: absolute;
+    transition: all 0.6s;
+    z-index: 10;
+    outline-offset: 1rem; }
+    .composition___photo--p1 {
+      top: -1rem; }
+    .composition___photo--p2 {
+      top: 5rem;
+      right: 0rem; }
+    .composition___photo--p3 {
+      top: 15rem;
+      left: 5rem; }
+    .composition___photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2rem 3rem #626567;
+      outline: 1rem solid #626567;
+      z-index: 20; }
+  .composition:hover .composition___photo:not(:hover) {
+    transform: scale(0.95); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(229, 231, 233, 0.8), rgba(98, 101, 103, 0.8)), url("https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg");
@@ -97,26 +183,28 @@ body {
     text-align: center; }
 
 .row {
-  text-align: center;
   max-width: 114rem;
-  background-color: #d1d0d0;
-  color: black;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 2rem; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row:after {
     content: "";
     display: table;
     clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 5rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 5rem) / 2);
-    background-color: red;
-    float: left; }
-    .row .col-1-of-2:not(:last-child) {
-      margin-right: 5rem; }
+    width: calc((100% - 5rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - (2* 5rem)) / 3);
-    background-color: red;
-    float: left; }
-    .row .col-1-of-3:not(:last-child) {
-      margin-right: 5rem; }
+    width: calc((100% - (2* 5rem)) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2*((100% - 2* 5rem) / 3) + 5rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3* 5rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2*(100% -  5rem) / 4); }
+  .row .col-3-of-4 {
+    width: calc(3*((100% - 3 * 5rem) / 4) + 2* 5rem); }
