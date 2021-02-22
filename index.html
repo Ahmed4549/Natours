@@ -12,6 +12,23 @@
 </head>
 
 <body>
+
+    <div class="navigation">
+        <input id="navi-toggle" type="checkbox" class="navigation___checkbox">
+        <label for="navi-toggle" class="navgation___button">MENU</label>
+        <div class="navigation___background">&nbsp;</div>
+        <nav class="navigation___nav">
+            <ul class="navigation___list">
+                <li class="navigation___item"><a href="#" class="navigation___link">ABOUT NATOURS</a></li>
+                <li class="navigation___item"><a href="#" class="navigation___link">YOUR BENIFITS</a></li>
+                <li class="navigation___item"><a href="#" class="navigation___link">POPULAR TOURS</a></li>
+                <li class="navigation___item"><a href="#" class="navigation___link">STORIES</a></li>
+                <li class="navigation___item"><a href="#" class="navigation___link">BOOK NOW</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
         <div class="header__logo-box">
             <img src="img/logo-white.png" alt="logo" class="header__logo">
@@ -196,6 +213,12 @@
             </div>
         </section>
         <section class="section-stories">
+            <div class="bg-video">
+                <video class="bg-video___content" autoplay muted loop>
+                    <source src="./video/Paradise Island in Sumatra.mp4" type="video/mp4">
+                        Ops! Your Browser Is not supported
+                </video>
+            </div>
             <div class="u-text-center u-margin-bottom-med">
                 <h2 class="heading-secondary">
                     We Make people happy
@@ -226,12 +249,71 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, cum voluptatum? Iure laboriosam et omnis nesciunt libero exercitationem corrupti explicabo debitis? Natus impedit soluta quod rem sequi temporibus consequuntur voluptatibus.</p>
                     </div>
                 </div>
+                
             </div>
-            <div class="u-center-text u-margin-top-big">
-                <a href="#" class="btn btn--gray">Read All Stories &rarr;</a>
+        </section>
+        <section class="section-book">
+            <div class="row">
+                <div class="book">
+                    <div class="book___form">
+                        <form action="#" class="form">
+                            <div class="form___group">
+                            <div class="u-text-center u-margin-bottom-med">
+                                <h2 class="heading-secondary">
+                                   Start Booking Now
+                                </h2>
+                            </div>
+                            <input id="name" type="text" class="form___input" placeholder="Full Name" required>
+                            <label for="name" class="form___label">Full Name</label>
+                        </div>
+                        <div class="form___group">
+                            <input id="email" type="email" class="form___input" placeholder="Email Address" required>
+                            <label for="email" class="form___label">Email Address</label>
+                        </div>
+                        <div class="form___radio-group">
+                            <input name="size" type="radio" class="form___radio-input" id="small">
+                            <label for="small" class="form___radio-label">
+                                <span class="form___radio-button"></span>
+                                Small Tour Group</label>
+                        </div>
+                        <div class="form___radio-group">
+                            <input name="size" type="radio" class="form___radio-input" id="large">
+                            <label for="large" class="form___radio-label">
+                                <span class="form___radio-button"></span>
+                                Large Tour Group</label>
+                        </div>
+                        <div class="u-center-text u-margin-top-big">
+                            <button type="submit" href="#" class="btn btn--gray">Discover All Tours</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer___logo-box">
+            <img src="./img/logo-green-small-2x.png" alt="full logo" class="footer___logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer___navigation">
+                    <ul class="footer___list">
+                        <li class="footer___item"><a href="#" class="footer___link">Company</a></li>
+                        <li class="footer___item"><a href="#" class="footer___link">Contact Us</a></li>
+                        <li class="footer___item"><a href="#" class="footer___link">Careers</a></li>
+                        <li class="footer___item"><a href="#" class="footer___link">Privacy</a></li>
+                        <li class="footer___item"><a href="#" class="footer___link">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer___copywrite">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, aspernatur repellat dolor excepturi reprehenderit voluptas maxime, at nihil placeat eligendi facere aliquid molestias autem obcaecati rerum ipsum sed in animi.
+                </p>
+            </div>
+        </div>
+    </footer>
     <!-- <section>
         <div class="grid-test">
             <div class="row">
@@ -299,5 +381,4 @@
         </div>
     </section> -->
 </body>
-
 </html>

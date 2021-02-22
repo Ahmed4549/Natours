@@ -1,0 +1,52 @@
+.footer{
+    background-color: $color-gray-dark-3;
+    color: $color-white;
+    padding: 10rem 0;
+    font-size: $default-font-size;
+
+    &___logo-box{
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    &___logo{
+        width: 15rem;
+        height: auto;
+    }
+    &___navigation{
+        border-top: 1px solid $color-primary-dark;
+        display: inline-block;
+    }   
+    &___list{
+        list-style: none;
+    }
+    &___items{
+        display: inline-block;
+
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+    &___link{
+        &:link, &:visited{
+            color: $color-gray-light-1;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 1.5rem;
+            transition: all .6s;
+
+            
+        }
+        &:hover, &:active{
+            color: rgb(2, 218, 247);
+            box-shadow: 0 1rem 4rem rgba($color-black, .4);
+            transform: rotate(15deg);
+        }
+    }
+    &___copywrite{
+        border-top: 1px solid $color-primary-dark;
+        padding-top: 1rem;
+        font-size: $default-font-size;
+        letter-spacing: .1rem;
+    }
+}
