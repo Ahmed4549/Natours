@@ -418,6 +418,113 @@ body {
   display: inline-block;
   margin-bottom: 2rem; }
 
+.navigation___checkbox {
+  display: none; }
+
+.navigation___button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+
+.navigation___background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#E5E7E9, #626567);
+  z-index: 1000;
+  transition: transform .6s; }
+
+.navigation___nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navigation___list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center; }
+
+.navigation___item {
+  margin: 1rem; }
+
+.navigation___link:link, .navigation___link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  font-weight: 300;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 230%;
+  transition: all .6s; }
+
+.navigation___link:hover, .navigation___link:active {
+  color: #626567;
+  background-position: 100%;
+  transform: translateX(1rem); }
+
+.navigation___checkbox:checked ~ .navigation___background {
+  transform: scale(80); }
+
+.navigation___checkbox:checked ~ .navigation___nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation___icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navigation___icon, .navigation___icon::before, .navigation___icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #252525;
+    display: inline-block; }
+  .navigation___icon::before, .navigation___icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation___icon::before {
+    top: -.8rem; }
+  .navigation___icon::after {
+    top: .8rem; }
+
+.navigation___button:hover .navigation___icon::before {
+  top: -1rem; }
+
+.navigation___button:hover .navigation___icon::after {
+  top: 1rem; }
+
+.navigation___checkbox:checked + .navigation___button .navigation___icon {
+  background-color: transparent; }
+
+.navigation___checkbox:checked + .navigation___button .navigation___icon::before {
+  transform: rotate(135deg);
+  top: 0; }
+
+.navigation___checkbox:checked + .navigation___button .navigation___icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(229, 231, 233, 0.8), rgba(98, 101, 103, 0.8)), url("https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg");
